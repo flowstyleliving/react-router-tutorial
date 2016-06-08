@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import NavLink from './NavLink'
 
 export default React.createClass({
   render() {
@@ -8,9 +9,10 @@ export default React.createClass({
         <h2>About</h2>
 
         <ul>
-          <li><Link to="/about/holla/force">Holla</Link></li>
-          <li><Link to="/about/atcha/power">Atcha</Link></li>
+          <li><NavLink to="/about/holla/force">Holla</NavLink></li>
+          <li><NavLink to="/about/atcha/power">Atcha</NavLink></li>
         </ul>
+        {this.props.children}
       </div>
     )
   }

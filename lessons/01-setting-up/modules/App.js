@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { IndexLink } from 'react-router'
 import NavLink from './NavLink'
+import Home from './Home'
 
 export default React.createClass({
   render() {
@@ -8,12 +9,12 @@ export default React.createClass({
       <div>
         <h1>Ghettohub Issues</h1>
         <ul role="nav">
+          <li><IndexLink to='/'>Home</IndexLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/repos">Repos</NavLink></li>
         </ul>
-
-        {/* add this */}
         {this.props.children}
+        {/* add this */}
 
       </div>
     )
